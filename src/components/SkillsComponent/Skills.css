@@ -1,0 +1,39 @@
+.main-skills{
+    position: relative;
+    width: 100%;
+    top: 30px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start;
+}
+.skills-header{
+    display: flex; /* This line makes the child a flex container */
+    align-items: center; /* Center items vertically within the skills-header */
+    justify-content: center; /* Center items horizontally within the skills-header */
+    width: 100%; /* Ensures the skills-header takes up the full width of the parent */
+    text-align: center;
+}
+
+.skills-container {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 50px; 
+    padding: 20px;
+    align-items: center; 
+    justify-content: center; 
+
+}
+
+.skill {
+    background-color: #801AE5;
+    font-size: 21px; 
+    padding: 10px;
+    border-radius: 10px; /* Changed to px for more consistent rounding */
+    width: 120px; /* Set a fixed width */
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+.main-container {
+    position: relative;
+    width: 100%;
+    top: 40px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start;
+    margin-left: 80px
+}
+
+
+.project-container  {
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 20px; /* Adjust margin as needed */
+    
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+}
+
+.project {
+    width: 400px;
+    height: 300px;
+    border-radius: 10%;
+    background-color: #302938;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    margin-bottom: 50px; 
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
