@@ -1,8 +1,9 @@
 import React from "react";
 import "./Spotify.css"
 import Login from "./Login.js"
+import Dashboard from "./Dashboard.js";
 
-const code = new URLSearchParams(window.location.search)
+const code = new URLSearchParams(window.location.search).get('code')
 
 function Spotify() {
     return (
@@ -18,6 +19,7 @@ function Spotify() {
                 <div className="spotify-container">
                     <div className="search-result-container">
                         <Login/>
+                       <Dashboard code={code}/> 
                     </div>
                     <iframe 
                         title="My Spotify Playlist"
