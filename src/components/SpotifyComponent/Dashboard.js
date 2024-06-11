@@ -12,6 +12,7 @@ export default function Dashboard ({code}) {
     const accessToken = useAuth(code)
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSeachResults] = useState([]);
+    const [playlistTracks, setPlaylistTracks] = useState([])
 
 
     useEffect(() => {
@@ -45,7 +46,17 @@ export default function Dashboard ({code}) {
         return () => cancel = true
     }, [searchTerm, accessToken]);
     
-
+    const addtoPlaylist = (trackUri) => {
+        const playlistId = "5PNVjDHvNl7Q5mUcCBnJ4n"; 
+        spotifyApi.addTracksToPlaylist(playlistId, [trackUri]).then(response => {
+            console.log("track added to playlist,", response)
+            loadTracks(playlistId)
+        })
+        .catch( err => {
+            console.log("error adding track to playlist", err)
+        })
+    }
+   
     return (
         <div>
             <form> 
@@ -56,8 +67,13 @@ export default function Dashboard ({code}) {
                  onChange={(e) => setSearchTerm(e.target.value)}
                  />
             </form>
-            {searchResults.map(track => (
-                <TrackSearchResults track={track} key={track.uri} />
+            {searchResults.map((track) => (
+                <div key={track.uri}>
+                <TrackSearchResults track={track} />
+                <button type="button" onClick={() => addtoPlaylist(track.uri)}>
+                    +
+                </button>
+                </div>
             ))}
 
         </div> 
