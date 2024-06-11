@@ -15,9 +15,13 @@
     justify-content: space-between; 
     margin-top: 50px;
     width: 90%;
-    gap: 300px;
+    gap: 100px;
 }
 .search-result-container{
-    width: 800px;
+    width: 1500px;
+    max-height: 600px; 
+    overflow: scroll;
 }
+
+
 

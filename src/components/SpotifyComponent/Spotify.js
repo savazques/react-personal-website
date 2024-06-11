@@ -25,7 +25,7 @@ function Spotify() {
                         title="My Spotify Playlist"
                         src="https://open.spotify.com/embed/playlist/5PNVjDHvNl7Q5mUcCBnJ4n?utm_source=generator&theme=0" 
                         width="100%" 
-                        height="400" 
+                        height="600" 
                         frameBorder="0" 
                         allowFullScreen={true} 
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
