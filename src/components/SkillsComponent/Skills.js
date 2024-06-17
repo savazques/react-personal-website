@@ -18,13 +18,10 @@ function Skills () {
             { skillName: 'HTML' },
             { skillName: 'CSS' },
             { skillName: 'PostgreSQL' },
+            { skillName: 'NextJs' },
     ];
     
-    const displaySkills = skills.map((skill, index) => 
-        <div key={skill.skillName + index} className="skill">
-            {skill.skillName}
-        </div>
-    );
+
 
     return (
         
@@ -34,7 +31,18 @@ function Skills () {
             <h1>Skills</h1>      
         </div>
         <div className="skills-container">
-            {displaySkills}
+            <div className="s-container">
+                <div className="skillss">
+                    {skills.map((skill, index) => 
+                        <div key={skill.skillName + index} className="skill">
+                            {skill.skillName}
+                    </div>)}
+                    {skills.map((skill, index) => 
+                        <div key={skill.skillName + index} className="skill">
+                            {skill.skillName}
+                    </div>)}
+                </div>
+            </div>
         </div>
 
     
