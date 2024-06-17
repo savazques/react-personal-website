@@ -1,21 +1,22 @@
-import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from 'react';
+import Dashboard from './Dashboard.js';
 
 const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=75b965ea1982472c8166015c2a4c48b9&response_type=code&redirect_uri=http://localhost:3000/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-modify-playback-state%20playlist-modify-public%20playlist-modify-private";
 
-function Login( ) {
-    const navigate = useNavigate()
+const code = new URLSearchParams(window.location.search).get('code');
 
-    function navtoSearch () {
-      window.location.href = AUTH_URL
-      navigate('searchDashboard')
-    }
+function Login() {
+  const handleAuthClick = () => {
+    window.location.href = AUTH_URL;
+  };
+
+  const validCode = !!code;
+
   return (
-    <button onClick={navtoSearch}>
-    ADD TO MY SPOTIFY PLAYLIST
-    </button>
-);
-  
+    <div>
+      {validCode ? <Dashboard code={code} /> : <button onClick={handleAuthClick}>ADD TO MY SPOTIFY PLAYLIST</button>}
+    </div>
+  );
 }
 
-export default Login; 
+export default Login;

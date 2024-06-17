@@ -8,7 +8,6 @@ function Spotify() {
     return (
         <div className="main-container-spotify">
 
-
             <div className="Title">
                     <h2> Add to My Spotify Playlist!</h2>
             </div> 
@@ -16,7 +15,6 @@ function Spotify() {
                 <div className="spotify-container">
                     <div className="search-result-container">
                         <Login/>
-
                     </div>
                     <iframe 
                         title="My Spotify Playlist"
