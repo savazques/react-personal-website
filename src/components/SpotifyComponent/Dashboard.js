@@ -12,7 +12,6 @@ export default function Dashboard ({code}) {
     const accessToken = useAuth(code)
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSeachResults] = useState([]);
-    const [playlistTracks, setPlaylistTracks] = useState([])
 
 
     useEffect(() => {
@@ -50,7 +49,7 @@ export default function Dashboard ({code}) {
         const playlistId = "5PNVjDHvNl7Q5mUcCBnJ4n"; 
         spotifyApi.addTracksToPlaylist(playlistId, [trackUri]).then(response => {
             console.log("track added to playlist,", response)
-            loadTracks(playlistId)
+            window.location.reload()
         })
         .catch( err => {
             console.log("error adding track to playlist", err)
