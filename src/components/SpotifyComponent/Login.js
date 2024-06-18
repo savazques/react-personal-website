@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <div>
-      {validCode ? <Dashboard code={code} /> : <button onClick={handleAuthClick}>ADD TO MY SPOTIFY PLAYLIST</button>}
+      {validCode ? <Dashboard code={code} /> : <button onClick={handleAuthClick} className='AuthButton'>ADD TO MY SPOTIFY PLAYLIST</button>}
     </div>
   );
 }

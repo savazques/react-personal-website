@@ -14,7 +14,10 @@ function Spotify() {
 
                 <div className="spotify-container">
                     <div className="search-result-container">
-                        <Login/>
+                        <div className="login-wrapper">
+                            <Login/>
+                        </div>
+                        
                     </div>
                     <iframe 
                         title="My Spotify Playlist"
