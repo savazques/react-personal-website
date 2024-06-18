@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 .Main-Container {
     position: relative;
     width: 100%;
@@ -5,7 +6,8 @@
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: flex-start;
-    margin-left: 80px
+    margin-left: 80px;
+    font-family: "Inter", sans-serif;
 }
 .content-container {
     display: flex; /* Use flexbox to align children horizontally */
@@ -52,7 +54,7 @@
 
 
 .paragraph-container p {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .funfact-container{
