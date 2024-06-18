@@ -55,3 +55,9 @@
     background-color: #1E1E1E; /* Change this to your desired sticky background color */
  /* Adjust padding when sticky */
 }
+.logoImage {
+    width: 25px; /* Adjust the size as needed */
+    height: 25x; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+  }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "./logo.png"
 import './Navbar.css';
 
 function Navbar() {
@@ -35,7 +36,9 @@ function Navbar() {
               <a href="#/">My Journey</a>
             </li>
             <li className="navItem">
-              <a href="#/">LOGO</a>
+              <a href="#/">
+                <img src={logo} alt="Logo" className="logoImage" />
+              </a>
             </li>
           </ul> 
         </div>

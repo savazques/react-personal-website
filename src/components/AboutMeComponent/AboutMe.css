@@ -42,6 +42,10 @@
     
 }
 
+.social-links a {
+    text-decoration: none
+}
+
 .circle {
     width: 100px;
     height: 100px;
