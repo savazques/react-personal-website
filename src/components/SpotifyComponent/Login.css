@@ -1,0 +1,10 @@
+.AuthButton{
+    width: 600px; 
+    height: 100px; 
+    background-color: #801AE5; 
+}
+button {
+    font-family: "Roboto";
+    font-size: 20px;
+    color: white;
+}

@@ -9,7 +9,7 @@ function Spotify() {
         <div className="main-container-spotify">
 
             <div className="Title">
-                    <h2> Add to My Spotify Playlist!</h2>
+                    <h2> Contribute to my Spotify Playlist!</h2>
             </div> 
 
                 <div className="spotify-container">

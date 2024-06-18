@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import useAuth from "./useAuth";
 import SpotifyWebApi from 'spotify-web-api-node'
 import TrackSearchResults from "./TrackSearchResults";
+import "./Dashboard.css"
 
 const spotifyApi = new SpotifyWebApi ({
     clientId: '75b965ea1982472c8166015c2a4c48b9',
@@ -67,7 +68,7 @@ export default function Dashboard ({code}) {
                  />
             </form>
             {searchResults.map((track) => (
-                <div key={track.uri}>
+                <div key={track.uri} className="track-container">
                 <TrackSearchResults track={track} />
                 <button type="button" onClick={() => addtoPlaylist(track.uri)}>
                     +
