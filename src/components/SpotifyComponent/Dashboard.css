@@ -1,5 +1,5 @@
 input {
-    width: 500px; 
+    width: 652px; 
     height: 50px; 
     color: white;
     font-size: 15px; 
@@ -13,5 +13,8 @@ input {
 }
 
 .track-container button {
-     /* Adjust the spacing between the track content and the button as needed */
+     background-color: #801AE5;
+     width: 35px; 
+     height: 35px;
+     font-size: 12px;   /* Adjust the spacing between the track content and the button as needed */
 }

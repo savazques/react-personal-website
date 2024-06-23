@@ -71,7 +71,7 @@ export default function Dashboard ({code}) {
                 <div key={track.uri} className="track-container">
                 <TrackSearchResults track={track} />
                 <button type="button" onClick={() => addtoPlaylist(track.uri)}>
-                    +
+                    Add
                 </button>
                 </div>
             ))}
