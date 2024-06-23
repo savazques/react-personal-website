@@ -15,7 +15,6 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: clientSecret
 });
 
-let accessToken = '';
 
 spotifyApi.clientCredentialsGrant().then(
     function(data) {
@@ -29,7 +28,17 @@ spotifyApi.clientCredentialsGrant().then(
     }
   );
   
+app.get('./search', async (req, res) => {
+    const { query } = req.query; 
 
+    try {
+        const response = await spotifyApi.searchTracks(query);
+        res.json(response.body);
+    } catch (error) {
+        console.error('Error searching tracks:', error);
+        res.status(500).json({ error: 'Failed to search tracks' });
+    }
+})
 const PORT = 3002;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

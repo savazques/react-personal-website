@@ -1,6 +1,7 @@
 import React from "react";
 import "./Spotify.css"
 import Login from "./Login.js"
+import Dashboard from "./Dashboard.js";
 
 
 function Spotify() {
@@ -15,7 +16,7 @@ function Spotify() {
                 <div className="spotify-container">
                     <div className="search-result-container">
                         <div className="login-wrapper">
-                            <Login/>
+                            <Dashboard/>
                         </div>
                         
                     </div>
