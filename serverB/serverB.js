@@ -28,7 +28,7 @@ spotifyApi.clientCredentialsGrant().then(
     }
   );
   
-app.get('./search', async (req, res) => {
+  app.get('/search', async (req, res) => {
     const { query } = req.query; 
 
     try {
@@ -38,7 +38,9 @@ app.get('./search', async (req, res) => {
         console.error('Error searching tracks:', error);
         res.status(500).json({ error: 'Failed to search tracks' });
     }
-})
+});
+
+
 const PORT = 3002;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
