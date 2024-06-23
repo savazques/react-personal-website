@@ -1,10 +1,8 @@
 const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
-const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
 
 
@@ -28,3 +26,8 @@ spotifyApi.clientCredentialsGrant().then (
         console.log("something went wrong", err);
     }
 )
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`Server A running on port ${PORT}`);
+});
