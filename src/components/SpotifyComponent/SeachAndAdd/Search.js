@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './Dashboard.css';
+import './Search.css';
 import TrackSearchResults from './TrackSearchResults';
+import useAuth from './useAuth.js';
+import usePlaylist from './usePlaylist.js';
+import Login from './Login.js'
 
-export default function Dashboard() {
+
+const code = new URLSearchParams(window.location.search).get('code');
+
+export default function Dashboard({onTrackAdded}) {
+
+    const accessToken = useAuth(code);
+    const { addToPlaylist } = usePlaylist(accessToken);
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [error, setError] = useState(null);
@@ -34,6 +43,20 @@ export default function Dashboard() {
         fetchSearchResults(searchTerm);
     }, [searchTerm]);
 
+    if (!code) {
+        return <Login />;
+    }
+
+    if (!accessToken) {
+        return <div>Loading...</div>;
+    }
+
+    const handleAddToPlaylist = async (trackUri) => {
+        await addToPlaylist(trackUri);
+        if (onTrackAdded) {
+            onTrackAdded(); // Notify parent component to refresh the playlist
+        }
+    };
     
 
     return (
@@ -49,8 +72,8 @@ export default function Dashboard() {
             {searchResults.map((track) => (
                 <div key={track.uri} className="track-container">
                 <TrackSearchResults track={track} />
-                <button type="button">
-                    Add
+                <button type="button" onClick={() => handleAddToPlaylist(track.uri)}>
+                    Add 
                 </button>
                 </div>
             ))}

@@ -56,4 +56,25 @@ app.post('/login', (req, res) => {
         });
 });
 
+app.post('/add-track', (req, res) => {
+    const { trackUri, playlistId } = req.body;
+    const accessToken = req.headers.authorization.split(' ')[1];
+
+    const spotifyApi = new SpotifyWebApi();
+    spotifyApi.setAccessToken(accessToken);
+
+    spotifyApi.addTracksToPlaylist(playlistId, [trackUri])
+        .then(data => {
+            console.log('Track added:', data.body);
+            res.sendStatus(200);
+        })
+        .catch(err => {
+            console.error('Error adding track:', err);
+            res.status(400).json({
+                error: err.message,
+                details: err.body,
+            });
+        });
+});
+
 app.listen(3001);

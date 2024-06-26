@@ -15,6 +15,17 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: clientSecret
 });
 
+const refreshAccessToken = async () => {
+  try {
+    const data = await spotifyApi.clientCredentialsGrant();
+    console.log('Access Token refreshed:', data.body['access_token']);
+    console.log('Expires in:', data.body['expires_in']);
+    spotifyApi.setAccessToken(data.body['access_token']);
+  } catch (error) {
+    console.error('Error refreshing access token:', error);
+    throw new Error('Failed to refresh access token');
+  }
+};
 
 spotifyApi.clientCredentialsGrant().then(
     function(data) {
@@ -22,11 +33,14 @@ spotifyApi.clientCredentialsGrant().then(
       console.log('Expires in:', data.body['expires_in']);
   
       spotifyApi.setAccessToken(data.body['access_token']);
+      setInterval(refreshAccessToken, (data.body['expires_in'] - 300) * 1000);
     },
     function(err) {
       console.log('Something went wrong', err);
     }
   );
+
+
   
   app.get('/search', async (req, res) => {
     const { query } = req.query; 
