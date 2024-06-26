@@ -1,10 +1,10 @@
 {
-  "name": "server",
+  "name": "oauth-server",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "oauth-server.js",
   "scripts": {
-    "devStart": "nodemon server.js",
-    "start": "node server.js"
+    "devStart": "nodemon oauth-server.js",
+    "start": "node oauth-server.js"
   },
   "keywords": [],
   "author": "",

@@ -54,7 +54,7 @@ export default function Dashboard({onTrackAdded}) {
     const handleAddToPlaylist = async (trackUri) => {
         await addToPlaylist(trackUri);
         if (onTrackAdded) {
-            onTrackAdded(); // Notify parent component to refresh the playlist
+            onTrackAdded(); 
         }
     };
     

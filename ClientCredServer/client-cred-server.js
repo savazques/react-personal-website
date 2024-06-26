@@ -2,13 +2,14 @@ const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config({ path: '../.env'}); 
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const clientId = '75b965ea1982472c8166015c2a4c48b9'; // Replace with your actual client ID
-const clientSecret = '755ea9059ae44d4bb2cdfe43d8b89df7'; // Replace with your actual client secret
+const clientId = process.env.SPOTIFY_CLIENT_ID;
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,

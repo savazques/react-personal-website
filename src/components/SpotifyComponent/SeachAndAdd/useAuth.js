@@ -8,13 +8,18 @@ export default function useAuth(code) {
 
     useEffect(() => {
         if (!code) {
-            console.log("No auth code provided");
+            axios.get('http://localhost:3001/access-token')
+                .then(res => {
+                    setAccessToken(res.data.accessToken);
+                })
+                .catch(err => {
+                    console.error('Error getting access token:', err);
+                });
             return;
         }
 
         axios.post('http://localhost:3001/login', { code })
             .then(res => {
-                console.log(res.data);
                 setAccessToken(res.data.accessToken);
                 setRefreshToken(res.data.refreshToken);
                 setExpiresIn(res.data.expiresIn);
@@ -44,3 +49,4 @@ export default function useAuth(code) {
 
     return accessToken;
 }
+
