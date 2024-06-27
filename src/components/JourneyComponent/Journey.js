@@ -12,7 +12,7 @@ function Journey () {
                 <div class="list">
                 <ul className = "jobs">
                     <li className="job">
-                    <h3>Software Engineer (June 2023 - July 2024) @Abogados Para Tus Deudas</h3>
+                    <h3>Software Engineer (June 2023 - July 2023) @Abogados Para Tus Deudas</h3>
                     <div className="job-description-container">
                         <div className="line"></div>
                         <div className="paragraph-container">

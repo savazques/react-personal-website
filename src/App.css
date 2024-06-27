@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0; 
-    padding: 0; 
-    background-color: #110C16;
+    padding: 0;
+    background: transparent;
     margin-bottom: 5px;
 }
 
@@ -10,13 +10,22 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 75px;
 }
+
 body {
     margin: 0;
     font-weight: 400;
     overflow-x: hidden;
     position: relative;
-    background-color: #110C16; 
     color: #fff;
+    background: linear-gradient(#100819, #29153D, #471737, #100819); /* Gradient background applied to body */
+    min-height: 100vh; /* Ensure body covers the entire viewport */
 }
+
+.App {
+    /* No background gradient on .App class */
+    height: 100%;
+    width: 100%;
+}
+
 
 

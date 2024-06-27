@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.png"
 import './Navbar.css';
 
-function Navbar() {
-  const [isSticky, setIsSticky] = useState(false); 
+function Navbar({ backgroundColor }) {
+  const [isSticky, setIsSticky] = useState(false);
 
-  useEffect (() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsSticky(true); 
+        setIsSticky(true);
       } else {
         setIsSticky(false);
       }
-    }; 
+    };
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); 
+  }, []);
 
   return (
-    <header className={`header ${isSticky ? 'sticky' : ''}`}>
-      <nav className="nav container">
-        <h3 className="NameTitle">Sarah Alexa Vasquez</h3>
+  
+    <header className={`header ${isSticky ? 'sticky' : ''}`} style={{ backgroundColor }}>
+      <nav className="nav-container">
         <div className="menu">
           <ul className="navOptions">
             <li className="navItem">
@@ -37,14 +36,15 @@ function Navbar() {
             </li>
             <li className="navItem">
               <a href="#/">
-                <img src={logo} alt="Logo" className="logoImage" />
+                Spotify
               </a>
             </li>
-          </ul> 
+          </ul>
         </div>
       </nav>
-      <div className="bar"></div>
+
     </header>
+
   );
 }
 

@@ -1,65 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 .header {
     position: sticky;
-    width: 100%;
-    top: 0;
+    top: 3%;
     left: 0;
+    right: 0;
     background-color: transparent;
-    z-index: 1000; /* Ensure it is above other content */
+    z-index: 1000;
     font-family: 'Inter', sans-serif;
     color: #fff;
-    padding: 30px;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s; 
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 4%; 
+    border-radius: 25px;
+    border: 4px solid #92a8d1;
+    padding-top: 1rem;
 }
 
-.nav {
+.nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin: 0 1rem; /* Adjusted for consistency */
+    justify-content: center;
+    height: 100%;
+
 }
 
 .navOptions {
-    display: flex; /* Display items horizontally */
-    list-style: none; /* Remove list bullet points */
+    display: flex; 
+    list-style: none; 
+    align-items: center;
     padding: 0;
-    margin: 0; /* Remove default margin */
-}
-
-.navItem {
-    margin-right: 1rem; /* Add space between items */
+    margin: 0;
+    height: 100%;
+    gap: 9rem
 }
 
 .navItem a {
-    text-decoration: none; /* Remove underline */
-    color: #fff; /* Set link color */
-    transition: color 0.4s; /* Smooth color transition */
-    font-size: 20px;
+    text-decoration: none; 
+    color: #fff; 
+    transition: color 0.4s;
+    font-size: 19px;
 }
 
 .navItem a:hover {
-    color: #66CDAA; /* Change color on hover */
-}
-
-.bar { 
-    width: 100%; 
-    height: 3px; 
-    background-color: #fff;
-}
-
-.NameTitle {
-    font-size: 30px;
-    font-weight: 400;
+    color: #66CDAA; 
 }
 
 .header.sticky {
-    background-color: #110C16; /* Change this to your desired sticky background color */
- /* Adjust padding when sticky */
+    background-color: transparent 
+ 
 }
-.logoImage {
-    width: 25px; /* Adjust the size as needed */
-    height: 25x; /* Adjust the size as needed */
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-  }
