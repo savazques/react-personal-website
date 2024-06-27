@@ -11,9 +11,19 @@ function Projects () {
                       <div className="project">
                           <div className="project-name">Travel App</div>
                           <div className="project-description">
-                              Learn about different places!
+                              A an app to make planning trips stress free and memorable!
                               <br />
-                              Plan your next adventure with ease.
+                              Some Key Features I plan to implement:
+                              * An global map for locations of trips
+                              * Cost Breakdown of Trip
+                              * Photo Gallery
+                              * Itinerary Creation
+                              <br/>
+                              Start Date: June 2024 - Present
+                              <br/>
+                              GitHub: ...
+                              <br/>
+                              Skills: ReactNative, Express, NodeJs
                           </div>
                       </div>
                   </a>
@@ -21,9 +31,12 @@ function Projects () {
                       <div className="project">
                           <div className="project-name">Music Discovery Saver</div>
                           <div className="project-description">
-                              Discover new music!
+                              Uses Spotify API to save the new Discover Weekly Playlist 
+                              that Spotify generates for you
                               <br />
-                              Save your favorite tracks and playlists.
+                              Start Date: March 2024 - April 2024
+                              <br/>
+                              Skills: Python
                           </div>
                       </div>
                   </a>
@@ -31,9 +44,14 @@ function Projects () {
                       <div className="project">
                           <div className="project-name">Personal Website</div>
                           <div className="project-description">
-                              Showcase your portfolio!
+                              CheckOut this source coode to this website!
                               <br />
-                              Highlight your skills and achievements.
+                              Key Feauture: Spotify Search and Add Component to my playlist
+                              where people who access my page can add and contribute to my spotify playlist!
+                              <br/>
+                              Start Date: April 2024 - June 2024
+                              <br/>
+                              Skills: ReactJs, NodeJs, Express 
                           </div>
                       </div>
                   </a>

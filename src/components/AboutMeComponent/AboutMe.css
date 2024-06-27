@@ -11,13 +11,13 @@
 }
 .image-container {
     flex: 0 0 auto; /* Take up remaining space */
-    margin-left: 50px; /* Adjust margin as needed */
+    margin-left: 60px; /* Adjust margin as needed */
 }
 
 .about-me-container {
     flex: 1; /* Take up more space */
     margin-left: 50px;
-    margin-right: 100px; 
+    margin-right: 150px; 
     align-items: flex-start;
 }
 
@@ -50,15 +50,15 @@
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 160px;
+    height: 70px;
+    border: 15%;
     background-color: #801AE5;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 150px;
     font-family: 'Inter', sans-serif;
     font-size: 23px;
 }

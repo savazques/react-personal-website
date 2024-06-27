@@ -18,7 +18,8 @@ body {
     position: relative;
     color: #fff;
     background: linear-gradient(#100819, #29153D, #471737, #100819); /* Gradient background applied to body */
-    min-height: 100vh; /* Ensure body covers the entire viewport */
+    min-height: 100vh; 
+    padding: 2rem
 }
 
 .App {
