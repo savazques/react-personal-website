@@ -4,16 +4,16 @@
     width: 100%;
     top: 30px;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     align-items: flex-start;
-    margin-left: 80px;
+    margin-left: 5%;
     font-family: "Inter", sans-serif;
 }
 .content-container {
-    display: flex; /* Use flexbox to align children horizontally */
-    flex-direction: row; /* Align items in a row */
-    align-items: flex-start; /* Align items to the top */
-    width: 100%; /* Ensure it uses full width */
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    width: 100%; 
 
 }
 .list {
@@ -27,28 +27,28 @@
 }
 .jobs {
     list-style-type: disc; 
-    padding: 0; /* Remove default padding */
+    padding: 0; 
 }
 
 .job {
-    margin-bottom: 40px; /* Add spacing between jobs */
+    margin-bottom: 40px; 
 }
 .jobs li::marker {
-    color: #801AE5; /* Change the color of the bullet points */
+    color: #801AE5; 
 }
 .job-description-container {
-    display: flex; /* Use flexbox to align children horizontally */
-    align-items: flex-start; /* Align items at the start vertically */
+    display: flex; 
+    align-items: flex-start; 
 }
 
 .line {
-    width: 5px; /* Adjust width as needed */
+    width: 5px; 
     background-color: #302938;
-    margin-right: 20px; /* Space between the line and the paragraph */
+    margin-right: 2%;
 }
 
 .paragraph-container {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
     width: 70%
 }
 
@@ -58,11 +58,78 @@
 }
 
 .funfact-container{
-    padding-top: 75px;
+    padding-top: 7%;
 }
 .fun-fact-circle{
+    margin-left: 10%; 
     width: 400px; /* Set the size of the circle */
     height: 400px; /* Set the size of the circle */
     border-radius: 50%; /* Make it a circle */
     background-color: #302938; /* Set the background color */
+}
+
+@media (max-width: 1260px) {
+    .fun-fact-circle {
+        width: 350px; /* Set the size of the circle */
+        height: 350px; /* Set the size of the circle */
+        border-radius: 50%; /* Make it a circle */
+    }
+    .funfact-container{
+        padding-top: 9%;
+    }
+    .line {
+        height: 10vw;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 1040px) {
+    .fun-fact-circle {
+        width: 350px; /* Set the size of the circle */
+        height: 350px; /* Set the size of the circle */
+        border-radius: 50%; /* Make it a circle */
+    }
+    .content-container {
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        width: 100%;
+    }
+    .paragraph-container {
+        margin: 0; /* Remove default margin */
+        width: 1000%
+    }
+    .job {
+        width: 70vw
+    }
+    .line {
+        height: 120px;
+        margin-right: 4%;
+    }
+    .funfact-container {
+        padding-top: 1%;
+        align-items: center; 
+    }
+
+}
+
+@media (max-width: 768px) {
+    .line {
+        height: 150px;
+        margin-right: 4%;
+    }
+    .Main-Container {
+        margin-bottom: 20%;
+
+    }
+}
+
+@media (max-width: 558px) {
+    .line {
+        height: 220px;
+        margin-right: 4%;
+    }
+    .funfact-container{
+        padding-top: 0.5%;
+    }
 }
