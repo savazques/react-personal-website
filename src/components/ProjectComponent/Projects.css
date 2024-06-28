@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: flex-start;
-    margin-left: 80px;
+    margin-left: 5%;
     font-family: "Inter", sans-serif;
 }
 
@@ -13,7 +13,8 @@
     display: flex; /* Make it a flex container */
     flex-direction: column; /* Stack children vertically */
     align-items: flex-start; /* Align items at the start */
-    margin-top: 20px; /* Adjust margin as needed */
+    margin-top: 20px; 
+    padding-right: 1%/* Adjust margin as needed */
 }
 
 .project-links {
@@ -27,8 +28,8 @@
 }
 
 .project {
-    width: 500px;
-    height: 240px;
+    width: 30rem;
+    height: 15rem;
     border-radius: 10px;
     background-color: #140C1C;
     color: white;
@@ -36,14 +37,14 @@
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
-    margin-bottom: 50px; 
+    margin-right: 3rem;
+    margin-bottom: 3rem; 
     font-family: 'Inter', sans-serif;
     border: 3px solid #302938;
     position: relative; 
     overflow: hidden; 
     transition: background-color 0.3s ease;
-    padding: 20px;
+    padding: 4rem;
     text-align: center;
 }
 
@@ -73,12 +74,56 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 20px;
-    font-size: 16px;
+    padding: 1rem;
+    font-size: 15px;
     text-align: center;
     transition: top 0.3s ease; 
 }
 
 .project:hover .project-description {
     top: 15%; 
+}
+
+@media (max-width: 1680px) {
+    .project {
+    width: 27rem;
+    height: 12rem;
+    }
+}
+
+@media (max-width: 1550px) {
+    .project {
+    width: 24rem;
+    height: 11rem;
+    }
+    .project-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 975px) {
+    .project {
+    width: 40rem;
+    height: 11rem;
+    }
+}
+
+@media (max-width: 851px) {
+    .project {
+    width: 35rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+
+    }
+}
+
+@media (max-width: 736px) {
+    .project {
+        width: 24rem;
+        height: 9rem;
+        margin-bottom: 1rem;
+    }
+    .project-description {
+        font-size: 12px;
+    }
 }
