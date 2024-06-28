@@ -128,3 +128,11 @@
   }
 }
 
+@media (max-width: 468px) {
+  .navItem a {
+    font-size: 0.7rem;
+  }
+  .navOptions {
+    gap: 1rem;
+  }
+}
