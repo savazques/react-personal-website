@@ -6,35 +6,42 @@
     top: 0px;
     display: flex;
     align-items: flex-start;
-    margin: 30px;
+    margin-top: 3%; /* Use percentage for margin */
     font-family: "Inter", sans-serif;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
+
 .image-container {
     flex: 0 0 auto; /* Take up remaining space */
-    margin-left: 60px; /* Adjust margin as needed */
+    margin-left: 5%; /* Adjust margin as needed */
+}
+
+.image-container img {
+    border-radius: 1rem; /* Example: make it a circle */
+    width: 34rem;
 }
 
 .about-me-container {
     flex: 1; /* Take up more space */
-    margin-left: 50px;
-    margin-right: 150px; 
+    margin-left: 5%; /* Use percentage for margin */
+    margin-right: 8%; 
     align-items: flex-start;
 }
 
 .about-me-container h2 {
-    font-size: 50px; 
+    font-size: 2.5rem; /* Use rem for font size */
     font-weight: 800;
-
 }
+
 .about-me-container p {
-    font-size: 30px;
+    font-size: 1.5rem; /* Use rem for font size */
     font-weight: 300;
 }
 
 .social-container {
     display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack children vertically */ /* Align items at the start */
-    margin-top: 50px; /* Adjust margin as needed */
+    flex-direction: column; /* Stack children vertically */
+    margin-top: 8%; /* Adjust margin as needed */
     text-decoration: none;
     align-items: center;
 }
@@ -42,28 +49,112 @@
 .social-links {
     display: flex;
     flex-wrap: wrap; /* Ensure items wrap to the next line if needed */
-    
+    justify-content: center; /* Center the links */
 }
 
 .social-links a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .circle {
-    width: 160px;
-    height: 70px;
-    border: 15%;
+    width: 11vw; /* Use viewport width for dimensions */
+    height: 9vh; /* Use viewport width for dimensions */
+    border-radius: 1rem; /* Make it a circle */
+    border: 1px solid white;
     background-color: #801AE5;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 150px;
+    margin-right: 5rem; /* Use percentage for margin */
     font-family: 'Inter', sans-serif;
-    font-size: 23px;
+    font-size: 1.7rem; /* Use rem for font size */
+    margin-bottom: 1%; /* Add margin at the bottom */
 }
 
 .circle:hover {
     background-color: #4682B4; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+    .Home {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        margin: 2rem; /* Adjust margin for smaller screens */
+    }
+
+    .about-me-container {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 5%; /* Add bottom margin */
+    }
+
+    .about-me-container h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .about-me-container p {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .circle {
+        width: 20vw; /* Adjust size for smaller screens */
+        height: 7.5vw; /* Adjust size for smaller screens */
+        margin-right: 1rem; /* Remove right margin */
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .Home {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        margin: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .image-container, .about-me-container {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 5%; /* Add bottom margin */
+    }
+
+    .image-container img {
+        width: 25rem;
+    }
+
+    .about-me-container h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .about-me-container p {
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .circle {
+        width: 20vw; /* Adjust size for smaller screens */
+        height: 7.5vw; /* Adjust size for smaller screens */
+        margin-right: 1rem; /* Remove right margin */
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Home {
+        margin: 3%; /* Adjust margin for very small screens */
+    }
+
+    .about-me-container h2 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .about-me-container p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .circle {
+        width: 23vw; /* Adjust size for very small screens */
+        height: 10vw; /* Adjust size for very small screens */
+    }
 }
 

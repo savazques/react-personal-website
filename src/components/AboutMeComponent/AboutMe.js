@@ -7,7 +7,7 @@ function AboutMe () {
         
        <div className="Home"> 
             <div className="image-container">
-                    <img src = {picofme} alt="" style={{ width: '500px', height: '400px', borderRadius: '25px' }}></img>
+                    <img src = {picofme} alt=""></img>
             </div>
 
             <div className="about-me-container">
@@ -15,7 +15,8 @@ function AboutMe () {
                 <p> I'm a full stack developer based in Northern, California. Currently,
                         I am focused on developing full-stack web and mobile devlopment and building
                         accessible, delightful user experiences. When I'm not coding I'm I probably,
-                        reading a book, discovering new music, or rewatching my favorite movies. 
+                        reading a book, discovering new music, or rewatching my favorite movies. Interact
+                        with my Spotify playlist down below! 
                         Feel free to reach out if you'd like to chat!
                     </p>
                 <div className="social-container">
