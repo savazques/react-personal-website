@@ -15,10 +15,10 @@ const FunFact = () => {
   };
 
   return (
-    <div className="funfact-container">
-      <div className='fun-fact-circle'>
+   
         <div className='quiz-container'>
           <ul className='twotruths'>
+            <h2>Guess the lie ... </h2>
             <li>
               <button 
                 type='button' 
@@ -48,8 +48,7 @@ const FunFact = () => {
             </li>
           </ul>
         </div>
-      </div>
-    </div>
+    
   );
 };
 

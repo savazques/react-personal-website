@@ -66,7 +66,11 @@ function Journey () {
                 </ul> 
                 </div>
 
-               <FunFact/>
+                <div className="funfact-container ">
+                    <div className='fun-fact-circle'>
+                        <FunFact/>
+                    </div>
+                </div>
             </div>
        </div>
         
