@@ -11,7 +11,7 @@ function Spotify() {
         setPlaylistRefreshKey(prevKey => prevKey + 1);
     };
     return (
-        <div className="main-container-spotify">
+        <div id="spotify" className="main-container-spotify">
 
             <div className="Title">
                     <h2> Contribute to my Spotify Playlist!</h2>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-scroll';
 import './Navbar.css';
 
 function Navbar({ backgroundColor }) {
@@ -20,32 +21,36 @@ function Navbar({ backgroundColor }) {
   }, []);
 
   return (
-  
     <header className={`header ${isSticky ? 'sticky' : ''}`} style={{ backgroundColor }}>
       <nav className="nav-container">
         <div className="menu">
           <ul className="navOptions">
             <li className="navItem">
-              <a href="#/">About Me</a>
+              <Link to="aboutMe">
+                <a href=" ">About Me</a>
+              </Link>
             </li>
             <li className="navItem">
-              <a href="#/">Projects</a>
+              <Link to="projects" >
+                <a href=" ">Projects</a>
+              </Link>
             </li>
             <li className="navItem">
-              <a href="#/">My Journey</a>
+              <Link to="myJourney">
+                <a href=" ">My Journey</a>
+              </Link>
             </li>
             <li className="navItem">
-              <a href="#/">
-                Spotify
-              </a>
+              <Link to="spotify">
+                <a href=" ">Spotify</a>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
-
     </header>
-
   );
 }
 
 export default Navbar;
+

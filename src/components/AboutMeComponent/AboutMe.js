@@ -5,7 +5,7 @@ import "./AboutMe.css";
 function AboutMe () {
     return (
         
-       <div className="Home"> 
+       <div id='aboutMe'  className="Home"> 
             <div className="image-container">
                     <img src = {picofme} alt=""></img>
             </div>

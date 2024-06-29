@@ -8,7 +8,8 @@
     align-items: flex-start;
     margin-top: 3%; /* Use percentage for margin */
     font-family: "Inter", sans-serif;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap; 
+    padding-top: 1rem; 
 }
 
 .image-container {

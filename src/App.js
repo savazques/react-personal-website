@@ -21,16 +21,13 @@ function App() {
     };
   }, []);
 
-  // Function to calculate current background color based on scroll position
   function getBackgroundColor() {
     const body = document.body;
     const top = window.scrollY;
     const height = body.scrollHeight - window.innerHeight;
 
-    // Calculate the scroll percentage
     const scrollPercentage = top / height;
 
-    // Define your gradient colors
     const gradientColors = [
       "#100819",
       "#29153D",
@@ -38,17 +35,15 @@ function App() {
       "#100819"
     ];
 
-    // Calculate the index of the gradient color array
     const index = Math.min(Math.floor(scrollPercentage * (gradientColors.length - 1)), gradientColors.length - 1);
 
-    // Return the current background color based on the scroll position
     return gradientColors[index];
   }
 
   return (
     <div className="App">
       <NavBar backgroundColor={backgroundColor} />
-      <AboutMe />
+      <AboutMe/>
       <Projects />
       <Journey />
       <Skills />

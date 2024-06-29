@@ -5,11 +5,10 @@ import FunFact from "./FunFact";
 function Journey () {
     return (
         
-       <div className="Main-Container"> 
+       <div id="myJourney" className="Main-Container"> 
             <h1> My Journey </h1>
+        
             <div className="content-container"> 
-            
-
                 <div class="list">
                 <ul className = "jobs">
                     <li className="job">
