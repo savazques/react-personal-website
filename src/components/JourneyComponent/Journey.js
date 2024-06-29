@@ -1,5 +1,6 @@
 import React from "react";
 import "./Journey.css"; 
+import FunFact from "./FunFact";
 
 function Journey () {
     return (
@@ -65,9 +66,7 @@ function Journey () {
                 </ul> 
                 </div>
 
-                <div className="funfact-container ">
-                    <div className='fun-fact-circle'> </div>
-                </div>
+               <FunFact/>
             </div>
        </div>
         

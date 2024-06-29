@@ -1,0 +1,39 @@
+/* FunFact.css */
+.funfact-container {
+    /* Your container styles */
+  }
+  
+  .fun-fact-circle {
+    /* Your circle styles */
+  }
+  
+  .quiz-container {
+    /* Your quiz container styles */
+  }
+  
+  .twotruths {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .test {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: lightgray;
+  }
+  
+  .correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .incorrect {
+    background-color: red;
+    color: white;
+  }
+  

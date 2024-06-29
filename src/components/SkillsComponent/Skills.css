@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: flex-start;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 4%;
+    padding-left: 4%;
     font-family: "Inter", sans-serif;
 }
 .skills-header{
@@ -48,12 +48,28 @@
     background-color: #801AE5;
     font-size: 21px; 
     padding: 0 10px;
-    border-radius: 10px; /* Changed to px for more consistent rounding */
-    width: 120px; /* Set a fixed width */
+    border-radius: 10px;
+    width: 8rem; 
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
      
+}
+
+@media (max-width: 950px) {
+    .skill {
+        width: 6rem;
+        height: 3rem;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 758px) {
+    .skill {
+        width: 5rem;
+        height: 2rem;
+        font-size: 14px;
+    }
 }

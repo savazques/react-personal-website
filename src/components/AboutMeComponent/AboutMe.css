@@ -73,7 +73,7 @@
 }
 
 .circle:hover {
-    background-color: #4682B4; /* Change color on hover */
+    background-color: #66CDAA; /* Change color on hover */
 }
 
 @media (max-width: 1663px) {

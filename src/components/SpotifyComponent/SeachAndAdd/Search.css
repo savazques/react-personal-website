@@ -1,6 +1,9 @@
+form {
+    color: white;
+}
 input {
-    width: 652px; 
-    height: 50px; 
+    width: 80vh; 
+    height: 3rem; 
     color: white;
     font-size: 15px; 
 }
@@ -14,7 +17,46 @@ input {
 
 .track-container button {
      background-color: #801AE5;
-     width: 35px; 
-     height: 35px;
-     font-size: 12px;   /* Adjust the spacing between the track content and the button as needed */
+     width: 3rem; 
+     height: 2rem;
+     font-size: 12px; 
+     font-weight: bold;
+     border: 2px solid white;
+     margin-right: 1rem;  /* Adjust the spacing between the track content and the button as needed */
+}
+
+@media (max-width: 1400px) {
+    input {
+        width: 60vh;
+    }
+}
+
+@media (max-width: 1080px) {
+    input {
+        width: 55vh;
+    }
+}
+
+@media (max-width: 1040px) {
+    input {
+        width: 100vh;
+    }
+}
+
+@media (max-width: 920px) {
+    input {
+        width: 80vh;
+    }
+}
+
+@media (max-width: 723px) {
+    input {
+        width: 60vh;
+    }
+}
+
+@media (max-width: 620px) {
+    input {
+        width: 50vh;
+    }
 }

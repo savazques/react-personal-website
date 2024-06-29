@@ -61,23 +61,24 @@ export default function Dashboard({onTrackAdded}) {
 
     return (
         <div>
-            <form> 
-                <input 
-                 type='text'
-                 placeholder="Search..."
-                 value={searchTerm}
-                 onChange={(e) => setSearchTerm(e.target.value)}
-                 />
-            </form>
+            <div className="search-bar-container">
+                <form>
+                    <input 
+                        type="text"
+                        placeholder="Search..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                </form>
+            </div>
             {searchResults.map((track) => (
                 <div key={track.uri} className="track-container">
-                <TrackSearchResults track={track} />
-                <button type="button" onClick={() => handleAddToPlaylist(track.uri)}>
-                    Add 
-                </button>
+                    <TrackSearchResults track={track} />
+                    <button type="button" onClick={() => handleAddToPlaylist(track.uri)}>
+                        Add 
+                    </button>
                 </div>
             ))}
-
         </div> 
-    )
+    );
 }
