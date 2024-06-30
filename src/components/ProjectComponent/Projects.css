@@ -85,6 +85,10 @@
     top: 15%; 
 }
 
+.funfact-container {
+    padding: 2rem; 
+}
+
 @media (max-width: 1680px) {
     .project {
     width: 27rem;
