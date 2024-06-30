@@ -15,6 +15,9 @@ function Spotify() {
 
             <div className="Title">
                     <h2> Contribute to my Spotify Playlist!</h2>
+                    <p> Type in the Search Bar for a song, I am open to any genre of music! I want to expand my music taste! Once you find a song just press the add
+                        button which will automatically add to my playlist! Thanks for contributing!!
+                    </p>
             </div> 
 
                 <div className="spotify-container">

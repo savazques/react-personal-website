@@ -54,3 +54,17 @@
   color: white; /* Corrected color from red to white for readability */
 }
 
+@media (max-width: 1489px) {
+  .quiz-container{
+    width: 24rem; 
+  }
+}
+@media (max-width: 1040px) {
+  .quiz-container {
+    width: 21rem; 
+  }
+
+  .test {
+    font-size: 12px; 
+  }
+}

@@ -23,7 +23,7 @@ function Journey () {
                                 learning how to learn this type of system. It was super rewarding and I gained a lot 
                                 both technical and critical thinking skills
                             </p>
-                            <p> Skills: </p>
+                            <h5> Skills: Bash, PostgresSQL, Python, NextJs, MiddleWare </h5>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@ function Journey () {
                                 will require so much growth and I will continue to grow into the role
                                 and leading a team that is making an impact and creating a community for our people in CS
                             </p>
-                            <p> Skills: </p>
+                            <h5> Skills: Leadership, Collaboration, Time Management, Critical Thinking </h5>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@ function Journey () {
                                 Everyday there is something new that I look forward to and always have to be aware
                                 and ensure that we are all being productive throughout a shift 
                             </p>
-                            <p> Skills: </p>
+                            <h5> Skills: TeamWork, Collaboration, Time Management</h5>
                         </div>
                     </div>
 
