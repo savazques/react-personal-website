@@ -23,7 +23,7 @@ function AboutMe () {
                     <div className="social-links">
                             <a href="https://www.linkedin.com"><div className="circle">LinkedIn</div></a>
                             <a href="https://github.com"><div className="circle">GitHub</div></a>
-                            <a href="mailto:someone@example.com"><div className="circle">Email</div></a>
+                            <a href="mailto:vasquezsarah523@gmail.com"><div className="circle">Email</div></a>
                     </div>
                 </div>
             </div>

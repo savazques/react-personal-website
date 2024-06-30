@@ -20,7 +20,6 @@ function Projects () {
                           </div>
                       </div>
                   
-                  <a href="sdf" className="project-link">
                       <div className="project">
                           <div className="project-name">Music Discovery Saver</div>
                           <div className="project-description">
@@ -30,8 +29,6 @@ function Projects () {
                               <h4>Skills: Python, Flask </h4>
                           </div>
                       </div>
-                  </a>
-                  <a href="sdf" className="project-link">
                       <div className="project">
                           <div className="project-name">Personal Website</div>
                           <div className="project-description">
@@ -43,7 +40,6 @@ function Projects () {
                               <h4>Skills: ReactJs, NodeJs, Express </h4>
                           </div>
                       </div>
-                  </a>
               </div>
           </div>
        </div>

@@ -11,10 +11,10 @@
     font-family: "Inter", sans-serif;
 }
 .skills-header{
-    display: flex; /* This line makes the child a flex container */
-    align-items: center; /* Center items vertically within the skills-header */
-    justify-content: center; /* Center items horizontally within the skills-header */
-    width: 100%; /* Ensures the skills-header takes up the full width of the parent */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
     text-align: center;
 }
 

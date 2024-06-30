@@ -19,6 +19,14 @@ function Skills () {
             { skillName: 'CSS' },
             { skillName: 'PostgreSQL' },
             { skillName: 'NextJs' },
+            { skillName: 'NodeJs' },
+            { skillName: 'MiddleWare' },
+            { skillName: 'Express' },
+            { skillName: 'RESTFUL API' },
+            { skillName: 'AWS' },
+            { skillName: 'Flask' },
+
+    
     ];
     
 

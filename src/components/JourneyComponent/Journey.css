@@ -63,9 +63,9 @@
 
 @media (max-width: 1260px) {
     .fun-fact-circle {
-        width: 350px; /* Set the size of the circle */
-        height: 350px; /* Set the size of the circle */
-        border-radius: 50%; /* Make it a circle */
+        width: 350px; 
+        height: 350px; 
+        border-radius: 50%; 
     }
     .line {
         height: 10vw;
@@ -75,9 +75,9 @@
 
 @media (max-width: 1040px) {
     .fun-fact-circle {
-        width: 350px; /* Set the size of the circle */
-        height: 350px; /* Set the size of the circle */
-        border-radius: 50%; /* Make it a circle */
+        width: 350px; 
+        height: 350px; 
+        border-radius: 50%; 
     }
     .content-container {
         display: flex; 
@@ -86,7 +86,7 @@
         width: 100%;
     }
     .paragraph-container {
-        margin: 0; /* Remove default margin */
+        margin: 0; 
         width: 1000%
     }
     .job {
