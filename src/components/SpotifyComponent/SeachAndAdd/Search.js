@@ -52,7 +52,11 @@ export default function Dashboard({onTrackAdded}) {
     }
 
     const handleAddToPlaylist = async (trackUri) => {
-        await addToPlaylist(trackUri);
+        if (accessToken) {
+            await addToPlaylist(trackUri)
+        } else {
+            console.error('No access token available')
+        }
         if (onTrackAdded) {
             onTrackAdded(); 
         }
