@@ -3,13 +3,11 @@ import './Search.css';
 import TrackSearchResults from './TrackSearchResults';
 import useAuth from './useAuth.js';
 import usePlaylist from './usePlaylist.js';
-import Login from './Login.js'
-
+import Login from './Login.js';
 
 const code = new URLSearchParams(window.location.search).get('code');
-
-export default function Dashboard({onTrackAdded}) {
-
+const apiUrl = process.env.CLIENT_API_URL; 
+export default function Dashboard({ onTrackAdded }) {
     const accessToken = useAuth(code);
     const { addToPlaylist } = usePlaylist(accessToken);
     const [searchTerm, setSearchTerm] = useState('');
@@ -18,17 +16,19 @@ export default function Dashboard({onTrackAdded}) {
 
     const fetchSearchResults = async (query) => {
         try {
-            const response = await fetch(`http://localhost:3002/search?query=${encodeURIComponent(query)}`);
+            const response = await fetch(`${apiUrl}/search?query=${encodeURIComponent(query)}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch search results');
             }
             const data = await response.json();
-            setSearchResults(data.tracks.items.map(track => ({
-                artist: track.artists[0].name,
-                title: track.name,
-                uri: track.uri,
-                albumUrl: track.album.images.length > 0 ? track.album.images[0].url : ''
-            })));
+            setSearchResults(
+                data.tracks.items.map((track) => ({
+                    artist: track.artists[0].name,
+                    title: track.name,
+                    uri: track.uri,
+                    albumUrl: track.album.images.length > 0 ? track.album.images[0].url : '',
+                }))
+            );
         } catch (error) {
             console.error('Error fetching search results:', error);
             setError('Failed to fetch search results');
@@ -53,21 +53,20 @@ export default function Dashboard({onTrackAdded}) {
 
     const handleAddToPlaylist = async (trackUri) => {
         if (accessToken) {
-            await addToPlaylist(trackUri)
+            await addToPlaylist(trackUri);
         } else {
-            console.error('No access token available')
+            console.error('No access token available');
         }
         if (onTrackAdded) {
-            onTrackAdded(); 
+            onTrackAdded();
         }
     };
-    
 
     return (
         <div>
             <div className="search-bar-container">
                 <form>
-                    <input 
+                    <input
                         type="text"
                         placeholder="Search..."
                         value={searchTerm}
@@ -79,10 +78,10 @@ export default function Dashboard({onTrackAdded}) {
                 <div key={track.uri} className="track-container">
                     <TrackSearchResults track={track} />
                     <button type="button" onClick={() => handleAddToPlaylist(track.uri)}>
-                        Add 
+                        Add
                     </button>
                 </div>
             ))}
-        </div> 
+        </div>
     );
 }
