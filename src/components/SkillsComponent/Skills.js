@@ -7,6 +7,7 @@ function Skills () {
 
    
     const skills = [
+        
             { skillName: 'Python' },
             { skillName: 'JavaScript' },
             { skillName: 'Go' },
@@ -23,10 +24,10 @@ function Skills () {
             { skillName: 'MiddleWare' },
             { skillName: 'Express' },
             { skillName: 'RESTFUL API' },
-            { skillName: 'AWS' },
             { skillName: 'Flask' },
-
-    
+            { skillName: 'AWS Lambda' },
+            { skillName: 'AWS Apmlify' },
+            { skillName: 'Web Scraping' },    
     ];
     
 

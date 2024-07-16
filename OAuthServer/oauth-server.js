@@ -67,7 +67,6 @@ app.post('/login', (req, res) => {
 });
 
 
-
 app.get('/access-token', (req, res) => {
     res.json({ accessToken });
 });
