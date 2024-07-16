@@ -4,7 +4,7 @@
     width: 100%;
     top: 30px;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     align-items: flex-start;
     padding-right: 4%;
     padding-left: 4%;

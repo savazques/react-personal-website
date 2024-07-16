@@ -3,19 +3,19 @@
     width: 100%;
     top: 40px;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     align-items: flex-start;
     margin-left: 5%;
     font-family: "Inter", sans-serif;
-    padding-top: 2rem
+    padding-top: 2rem;
 }
 
 .project-container {
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack children vertically */
-    align-items: flex-start; /* Align items at the start */
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
     margin-top: 20px; 
-    padding-right: 1%/* Adjust margin as needed */
+    padding-right: 1%;
 }
 
 .project-links {
@@ -47,6 +47,7 @@
     transition: background-color 0.3s ease;
     padding: 4rem;
     text-align: center;
+    border: 2px solid #92a8d1;
 }
 
 .project:hover {
@@ -58,7 +59,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    font-size: 23px;
+    font-size: 30px;
+    font-weight: bold;
     transition: top 0.3s ease, transform 0.3s ease; 
 }
 

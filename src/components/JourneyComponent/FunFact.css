@@ -2,7 +2,7 @@
   text-align: center;
   width: 25rem;
   height: auto; 
-  background-color: #1D1D1D;
+  background-color: #140C1C;
   border-radius: 2rem;
   border: 2px solid #92a8d1;
   padding-bottom: 1rem;
@@ -31,7 +31,7 @@
   padding: 1.4rem 0.3rem;
   border: 2px solid #92a8d1;
   cursor: pointer;
-  background-color: #4C1187;
+  background-color: #801AE5;
   color: white;
   transition: background-color 0.3s ease;
   font-size: 13.2px;
@@ -51,7 +51,7 @@
 
 .incorrect {
   background-color: red;
-  color: white; /* Corrected color from red to white for readability */
+  color: white;
 }
 
 @media (max-width: 1489px) {

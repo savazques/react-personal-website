@@ -23,7 +23,7 @@ input {
      font-size: 12px; 
      font-weight: bold;
      border: 2px solid white;
-     margin-right: 1rem;  /* Adjust the spacing between the track content and the button as needed */
+     margin-right: 1rem;  
 }
 
 @media (max-width: 1400px) {
