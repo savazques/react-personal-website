@@ -47,7 +47,6 @@ function App() {
       <Projects />
       <Journey />
       <Skills />
-      <Spotify />
     </div>
   );
 }
