@@ -2,6 +2,7 @@ const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const serverless = require('serverless-http');
 require('dotenv').config(); 
 
 const app = express();
