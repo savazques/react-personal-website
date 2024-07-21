@@ -6,7 +6,7 @@ import usePlaylist from './usePlaylist.js';
 import Login from './Login.js';
 
 const code = new URLSearchParams(window.location.search).get('code');
-const apiUrl = process.env.CLIENT_API_URL; 
+
 export default function Dashboard({ onTrackAdded }) {
     const accessToken = useAuth(code);
     const { addToPlaylist } = usePlaylist(accessToken);
@@ -14,9 +14,11 @@ export default function Dashboard({ onTrackAdded }) {
     const [searchResults, setSearchResults] = useState([]);
     const [error, setError] = useState(null);
 
+   
     const fetchSearchResults = async (query) => {
         try {
-            const response = await fetch(`${apiUrl}/search?query=${encodeURIComponent(query)}`);
+            console.log('Fetching search results for query:', query);
+            const response = await fetch(`http://localhost:3002/search?query=${encodeURIComponent(query)}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch search results');
             }
@@ -48,7 +50,7 @@ export default function Dashboard({ onTrackAdded }) {
     }
 
     if (!accessToken) {
-        return <div>Loading...</div>;
+        console.log('no access token')
     }
 
     const handleAddToPlaylist = async (trackUri) => {
@@ -65,6 +67,7 @@ export default function Dashboard({ onTrackAdded }) {
     return (
         <div>
             <div className="search-bar-container">
+
                 <form>
                     <input
                         type="text"
@@ -82,6 +85,7 @@ export default function Dashboard({ onTrackAdded }) {
                     </button>
                 </div>
             ))}
+            {error && <div className="error">{error}</div>}
         </div>
     );
 }

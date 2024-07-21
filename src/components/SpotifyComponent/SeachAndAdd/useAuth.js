@@ -5,12 +5,10 @@ export default function useAuth(code) {
     const [accessToken, setAccessToken] = useState();
     const [refreshToken, setRefreshToken] = useState();
     const [expiresIn, setExpiresIn] = useState();
-    const apiUrl = process.env.OAUTH_API_URL; 
-
 
     useEffect(() => {
         if (!code) {
-            axios.get(`${apiUrl}/access-token`)
+            axios.get(`http://localhost:3001/access-token`)
                 .then(res => {
                     setAccessToken(res.data.accessToken);
                 })
@@ -20,7 +18,7 @@ export default function useAuth(code) {
             return;
         }
 
-        axios.post(`${apiUrl}/login`, { code })
+        axios.post(`http://localhost:3001/login`, { code }) 
             .then(res => {
                 setAccessToken(res.data.accessToken);
                 setRefreshToken(res.data.refreshToken);
@@ -36,7 +34,7 @@ export default function useAuth(code) {
         if (!refreshToken || !expiresIn) return;
 
         const interval = setInterval(() => {
-            axios.post(`${apiUrl}/refresh`, { refreshToken })
+            axios.post(`http://localhost:3001/refresh`, { refreshToken })
                 .then(res => {
                     setAccessToken(res.data.accessToken);
                     setExpiresIn(res.data.expiresIn);

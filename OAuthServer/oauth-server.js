@@ -2,8 +2,7 @@ const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const serverless = require('serverless-http');
-require('dotenv').config();
+require('dotenv').config({ path: '../.env'}); 
 
 const app = express();
 app.use(cors());
@@ -11,7 +10,7 @@ app.use(bodyParser.json());
 
 const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-const redirectUri = process.env.REDIRECT_URI;
+const redirectUri = 'http://localhost:3000/'
  
 
 
@@ -78,16 +77,9 @@ app.get('/access-token', (req, res) => {
   res.json({ accessToken });
 });
 
-app.get('/search', async (req, res) => {
-  const { query } = req.query;
 
-  try {
-    const response = await spotifyApi.searchTracks(query);
-    res.json(response.body);
-  } catch (error) {
-    console.error('Error searching tracks:', error);
-    res.status(500).json({ error: 'Failed to search tracks' });
-  }
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
-
-module.exports.handler = serverless(app);
