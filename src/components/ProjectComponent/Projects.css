@@ -84,7 +84,7 @@
 }
 
 .project:hover .project-description {
-    top: 15%; 
+    top: 0; 
 }
 
 .funfact-container {
@@ -139,8 +139,18 @@
     .funfact-container {
         padding: 1rem; 
     }
-    .main-container{
-        padding-right: 2rem; 
-    }
 }
 
+@media (max-width: 440px) {
+    .project {
+        width: 20rem;
+        height: 8rem;
+        margin-bottom: 2rem;
+    }
+    .project-description {
+        font-size: 7px;
+    }
+    .project-name {
+        font-size: 18px;
+    }
+}

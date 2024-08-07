@@ -14,7 +14,7 @@ function Projects () {
                           <div className="project-name">Travel App</div>
                           <div className="project-description">
                               <h4>An app to make planning trips stress-free and memorable!</h4>
-                              <h4>TThis app will encompass CRUD operations for proper database management and user Authentication and creation. Along with using Google API's to obtain location and display on interactive map to pinpoint destinations visited. </h4>
+                              <h4>This app will encompass CRUD operations for proper database management and user Authentication and creation. Along with using Google API's to obtain location and display on interactive map to pinpoint destinations visited. </h4>
                               <h4>Duration: June 2024 - Present</h4>
                               <h4>GitHub: ...</h4>
                               <h4>Skills: ReactNative, Express, NodeJs, PostgreSQL, RESTFUL API's  </h4>
