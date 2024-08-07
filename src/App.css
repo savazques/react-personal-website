@@ -19,7 +19,7 @@ body {
     color: #fff;
     background: linear-gradient(#100819, #29153D, #471737, #100819); 
     min-height: 100vh; 
-    padding: 2rem
+    padding: 2rem;
 }
 
 .App {

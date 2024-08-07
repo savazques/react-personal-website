@@ -23,7 +23,7 @@ function Journey () {
                                 learning how to learn this type of system. It was super rewarding and I gained a lot 
                                 both technical and critical thinking skills
                             </p>
-                            <h5> Skills: Bash, PostgresSQL, Python, NextJs, MiddleWare </h5>
+                            <h5> Skills: Bash, PostgresSQL, TypeScript, Python, NextJs, MiddleWare </h5>
                         </div>
                     </div>
 

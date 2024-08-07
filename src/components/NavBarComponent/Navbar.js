@@ -41,8 +41,8 @@ function Navbar({ backgroundColor }) {
               </Link>
             </li>
             <li className="navItem">
-              <Link to="spotify">
-                <a href=" ">Spotify</a>
+              <Link to="skills">
+                <a href=" ">Skills</a>
               </Link>
             </li>
           </ul>

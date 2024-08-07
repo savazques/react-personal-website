@@ -1,34 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-.main-skills{
+
+.main-skills {
     position: relative;
     width: 100%;
     top: 30px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     padding-right: 4%;
     padding-left: 4%;
+    padding-bottom: 4%;  
     font-family: "Inter", sans-serif;
 }
-.skills-header{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100%; 
+
+.skills-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     text-align: center;
 }
 
-.skills-container{
+.skills-container {
     width: 100%;
-    margin-top: 30px; 
+    margin-top: 30px;
     overflow: hidden;
 }
 
-.skills-container .s-container .skillss{
-    display: flex; 
-    animation: swipe 15000ms linear infinite;
+.skills-container .s-container .skillss {
+    display: flex;
     gap: 10px;
+    animation: swipe 20s linear infinite;
+}
 
+.skills-container .s-container.reverse .skillss {
+    animation: swipe-reverse 20s linear infinite;
 }
 
 .skills-container .s-container {
@@ -37,25 +43,33 @@
 
 @keyframes swipe {
     0% {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-30%)
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes swipe-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 .skill {
     background-color: #801AE5;
-    font-size: 21px; 
+    font-size: 21px;
     padding: 0 10px;
     border-radius: 10px;
-    width: 8rem; 
+    width: 8rem;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-     
 }
 
 @media (max-width: 950px) {

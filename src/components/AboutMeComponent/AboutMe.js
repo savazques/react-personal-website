@@ -12,11 +12,9 @@ function AboutMe () {
 
             <div className="about-me-container">
                 <h2> Hi, I'm Sarah </h2>
-                <p> I'm a full stack developer based in Northern, California. Currently,
-                        I am focused on developing full-stack web and mobile devlopment and building
-                        accessible, delightful user experiences. When I'm not coding I'm I probably,
-                        reading a book, discovering new music, or rewatching my favorite movies. Interact
-                        with my Spotify playlist down below! 
+                <p> I'm a software developer based in Northern, California. Currently,
+                        I am currently focused on back-end and mobile devlopment. When I'm not coding you can
+                        find me reading a book, discovering new music, or rewatching my favorite movies. 
                         Feel free to reach out if you'd like to chat!
                     </p>
                 <div className="social-container">

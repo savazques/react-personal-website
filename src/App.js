@@ -5,7 +5,6 @@ import AboutMe from "./components/AboutMeComponent/AboutMe.js";
 import Projects from './components/ProjectComponent/Projects.js';
 import Journey from './components/JourneyComponent/Journey.js'; 
 import Skills from "./components/SkillsComponent/Skills.js";
-import Spotify from "./components/SpotifyComponent/Spotify.js";
 
 function App() {
   const [backgroundColor, setBackgroundColor] = useState(getBackgroundColor());
@@ -47,7 +46,6 @@ function App() {
       <Projects />
       <Journey />
       <Skills />
-      <Spotify/>
     </div>
   );
 }
