@@ -11,6 +11,7 @@ const skills = {
         { skillName: 'CSS' },
         { skillName: 'NextJs' },
         { skillName: 'Web Dev' },
+        { skillName: 'TailwindCSS'},
     ],
     backend: [
         { skillName: 'Python' },

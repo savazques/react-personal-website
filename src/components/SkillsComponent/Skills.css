@@ -37,12 +37,12 @@
     display: flex;
     gap: 10px;
     white-space: nowrap; 
-    width: 250%; 
-    animation: swipe 20s linear infinite;
+    width: 260%; 
+    animation: swipe 30s linear infinite;
 }
 
 .s-container.reverse .skillss {
-    animation: swipe-reverse 20s linear infinite;
+    animation: swipe-reverse 30s linear infinite;
 }
 
 @keyframes swipe {
