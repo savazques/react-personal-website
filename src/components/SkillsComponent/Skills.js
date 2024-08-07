@@ -1,35 +1,41 @@
 import React from 'react';
 import './Skills.css';
 
-const skills = [
-    { skillName: 'Python' },
-    { skillName: 'JavaScript' },
-    { skillName: 'Typescript' },
-    { skillName: 'Go' },
-    { skillName: 'C++' },
-    { skillName: 'C' },
-    { skillName: 'ReactJS' },
-    { skillName: 'ReactNative' },
-    { skillName: 'Bash' },
-    { skillName: 'HTML' },
-    { skillName: 'CSS' },
-    { skillName: 'PostgreSQL' },
-    { skillName: 'NextJs' },
-    { skillName: 'NodeJs' },
-    { skillName: 'MiddleWare' },
-    { skillName: 'Express' },
-    { skillName: 'RESTFUL API' },
-    { skillName: 'Flask' },
-    { skillName: 'AWS Lambda' },
-    { skillName: 'Web Scraping' },
-    { skillName: 'Web Dev' },
-
-];
+const skills = {
+    frontend: [
+        { skillName: 'JavaScript' },
+        { skillName: 'TypeScript' },
+        { skillName: 'ReactJS' },
+        { skillName: 'ReactNative' },
+        { skillName: 'HTML' },
+        { skillName: 'CSS' },
+        { skillName: 'NextJs' },
+        { skillName: 'Web Dev' },
+    ],
+    backend: [
+        { skillName: 'Python' },
+        { skillName: 'Go' },
+        { skillName: 'C++' },
+        { skillName: 'C' },
+        { skillName: 'NodeJs' },
+        { skillName: 'Express' },
+        { skillName: 'RESTFUL API' },
+        { skillName: 'PostgreSQL' },
+        { skillName: 'AWS Lambda' },
+        { skillName: 'Flask' },
+        { skillName: 'Web Scraping' },
+    ]
+};
 
 const Skills = () => {
-    const halfLength = Math.ceil(skills.length / 2);
-    const firstHalfSkills = skills.slice(0, halfLength);
-    const secondHalfSkills = skills.slice(halfLength);
+    const createSkillList = (skills) => {
+        const doubledSkills = [...skills, ...skills]; 
+        return doubledSkills.map((skill, index) => (
+            <div key={skill.skillName + index} className="skill">
+                {skill.skillName}
+            </div>
+        ));
+    };
 
     return (
         <div id='skills' className="main-skills">
@@ -38,21 +44,15 @@ const Skills = () => {
             </div>
             <div className="skills-container">
                 <div className="s-container">
+                    <h3>Front-End Skills</h3>
                     <div className="skillss">
-                        {[...firstHalfSkills, ...firstHalfSkills].map((skill, index) =>
-                            <div key={skill.skillName + index} className="skill">
-                                {skill.skillName}
-                            </div>
-                        )}
+                        {createSkillList(skills.frontend)}
                     </div>
                 </div>
                 <div className="s-container reverse">
+                    <h3>Back-End Skills</h3>
                     <div className="skillss">
-                        {[...secondHalfSkills, ...secondHalfSkills].map((skill, index) =>
-                            <div key={skill.skillName + index} className="skill">
-                                {skill.skillName}
-                            </div>
-                        )}
+                        {createSkillList(skills.backend)}
                     </div>
                 </div>
             </div>

@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: 4%;
-    padding-left: 4%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-bottom: 4%;  
     font-family: "Inter", sans-serif;
 }
@@ -24,21 +24,25 @@
 .skills-container {
     width: 100%;
     margin-top: 30px;
-    overflow: hidden;
 }
 
-.skills-container .s-container .skillss {
+.s-container {
+    width: 100%;
+    overflow: hidden; 
+    margin-bottom: 20px; 
+    position: relative; 
+}
+
+.skillss {
     display: flex;
     gap: 10px;
+    white-space: nowrap; 
+    width: 250%; 
     animation: swipe 20s linear infinite;
 }
 
-.skills-container .s-container.reverse .skillss {
+.s-container.reverse .skillss {
     animation: swipe-reverse 20s linear infinite;
-}
-
-.skills-container .s-container {
-    display: flex;
 }
 
 @keyframes swipe {
@@ -61,29 +65,30 @@
 
 .skill {
     background-color: #801AE5;
-    font-size: 21px;
+    font-size: 16px; 
     padding: 0 10px;
     border-radius: 10px;
-    width: 8rem;
-    height: 60px;
+    width: 150px; 
+    height: 50px; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box; 
 }
 
 @media (max-width: 950px) {
     .skill {
-        width: 6rem;
-        height: 3rem;
-        font-size: 16px;
+        width: 120px; 
+        height: 40px; 
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 758px) {
     .skill {
-        width: 5rem;
-        height: 2rem;
-        font-size: 14px;
+        width: 100px; 
+        height: 30px; 
+        font-size: 12px;
     }
 }
