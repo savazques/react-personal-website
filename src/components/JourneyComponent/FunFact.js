@@ -15,7 +15,7 @@ const FunFact = () => {
         setDescription('This is True! I was a Poltical Science Major at first, but after I took the Intro to Programming course my first quarter as a freshman, I enjoyed it so much I switched to CS :))');
         break;
       case 2:
-        setDescription(' The is the Lie! My first concert was actually One Direction :P pre-Zayn breakup');
+        setDescription(' This is the Lie! I have been to quite a few actually! My first one was One Direction (when Zayn was still in the band) and my most recent one is Young Miko');
         break;
       default:
         setDescription('');
@@ -25,7 +25,7 @@ const FunFact = () => {
   const truths = [
     'I qualified for the Junior Olympics as a kid',
     'I entered college as a Political Science Major',
-    'My first concert I ever went to was Lady Gaga'
+    'I have never been to a concert in my life'
   ];
 
   return (
